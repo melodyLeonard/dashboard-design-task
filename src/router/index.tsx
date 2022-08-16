@@ -8,7 +8,12 @@ const AppNavigation = () => {
     const isAuthenticated = true
     return <BrowserRouter>
                 <Routes>
-                    <Route index element={<Home />} />
+                    <Route index element={
+                        <ProtectedRoute isAuthenticated={false}>
+                            <SideBar>
+                                <Home />
+                            </SideBar>
+                        </ProtectedRoute>} />
                     {
                         routes.map(({path}, idx)=> <Route
                             key={idx}

@@ -9,7 +9,7 @@ interface IProps{
 
 export const ProtectedRoute:FC<IProps> = ({
     isAuthenticated,
-    redirectPath = '/',
+    redirectPath = '/dashboard',
     children,
     }) => {
     if (!isAuthenticated) {

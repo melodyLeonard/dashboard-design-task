@@ -12,7 +12,7 @@ ChartJS.register(...registerables);
 const StudentsPerformance = () => {
   return <div className='student-pef-wrapper'>
     <Flex.Row>
-        <Lead className='title'>Students Performance</Lead>
+        <Lead className='title-students'>Students Performance</Lead>
         <Flex.Row className='rate-marker'>
             <FiArrowUpCircle/>
             <span>

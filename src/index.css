@@ -10,15 +10,7 @@ body {
   color: rgb(21, 21, 21);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.ant-layout-header {
-  height: 40px !important;
-  padding: 0 !important;
-  background: white !important;
-  box-shadow: 0 0 8px rgb(118, 116, 116);
-  -webkit-box-shadow: 0 0 8px rgb(118, 116, 116);
-  -moz-box-shadow: 0 0 8px rgb(118, 116, 116);
+  overflow: hidden !important
 }
 
 .ml-1 {

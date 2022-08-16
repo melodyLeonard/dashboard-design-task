@@ -1,0 +1,44 @@
+.teacher-list-container {
+    width: 875px;
+    height: 350px;
+    background: white;
+    border-radius: 5px;
+    padding: 10px 0;
+
+    .header {
+        padding: 0px 10px;
+        border-bottom: 1px dotted #e8e8e8;
+    }
+
+    .table-wrapper {
+        padding: 0px 20px;
+        width: 100%;
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+
+            th,
+            td {
+                text-align: left;
+                padding: 10px;
+                border-bottom: 1px solid #e8e8e8;
+
+                .table-item {
+                    margin-bottom: 0;
+                }
+
+                .action {
+                    max-width: 60px;
+                }
+            }
+
+            .table-item-row {
+                &:hover {
+                    background: #f9f9f9;
+                }
+            }
+        }
+    }
+
+}

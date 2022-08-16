@@ -34,3 +34,65 @@ export const cardData= [
 
     }
 ]
+
+export const table = {
+    headerItems: [
+        'Name', 
+        'Department', 
+        'Email',
+        'Class Name',
+        'Subject',
+        'Action'
+    ],
+    content: [
+        {
+            name: 'John Doe',
+            department: 'Science',
+            email: 'example@email.com',
+            className: 'Class A',
+            subject: 'CSE',
+            action: 'View'
+        },
+         {
+            name: 'Melody Leonard',
+            department: 'Engineering',
+            email: 'example@email.com',
+            className: 'Class C',
+            subject: 'CSE',
+            action: 'View'
+        },
+         {
+            name: 'John Doe',
+            department: 'Maths',
+            email: 'example@email.com',
+            className: 'Class A',
+            subject: 'CSE',
+            action: 'View'
+        },
+         {
+            name: 'Kate Johnson',
+            department: 'English',
+            email: 'kate@email.com',
+            className: 'Class A',
+            subject: 'English',
+            action: 'View'
+        },
+         {
+            name: 'John Doe',
+            department: 'Computer Science',
+            email: 'example@email.com',
+            className: 'Class B',
+            subject: 'CSE',
+            action: 'View'
+        },
+         {
+            name: 'John Doe',
+            department: 'Computer Science',
+            email: 'example@email.com',
+            className: 'Class C',
+            subject: 'Science',
+            action: 'View'
+        },
+
+    ]
+}

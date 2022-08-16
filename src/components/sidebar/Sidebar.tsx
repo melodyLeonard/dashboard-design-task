@@ -1,30 +1,37 @@
 import { UserOutlined } from '@ant-design/icons';
-import { Avatar, Layout } from 'antd';
+import { Avatar } from 'antd';
 import { AnimatePresence, motion } from "framer-motion";
 import { FC, ReactNode } from "react";
-import { NavLink } from "react-router-dom";
+import Scrollbars from 'react-custom-scrollbars-2';
+import { MdKeyboardArrowRight } from 'react-icons/md';
+import { NavLink, useLocation } from "react-router-dom";
 import { useSidebar } from '../../store/hooks/useSidebar';
+import { letterCase } from '../../utils/common';
+import { Flex } from '../layout/Layout';
+import { Lead, Paragraph } from '../layout/Typography';
+import Topbar from '../topbar/Topbar';
 import { showAnimation } from './constants';
 import { routes } from "./routes";
 import './sidebar.scss';
 import SidebarMenu from "./SidebarMenu";
-import Topbar from '../topbar/Topbar';
-
 
 
 interface IProps{
     children: ReactNode
 }
 
-const { Header } = Layout;
 const SideBar:FC<IProps> = ({ children }) => {
   const {isOpen} = useSidebar();
+  const {pathname} = useLocation();
 
+  const actualPath = pathname.split('/');
+  
+  console.log(actualPath);
 
   return (
     <>
       <div className="main-container">
-        <motion.div
+          <motion.div
           animate={{
             width: isOpen ? "160px" : "45px",
             transition: {
@@ -35,11 +42,12 @@ const SideBar:FC<IProps> = ({ children }) => {
           }}
           className={`sidebar `}
         >
-           <Header style={{ zIndex: 1}}>
+          <Scrollbars style={{ width: isOpen ? '160px' : '45px', height: '101vh' }}>
+           <div style={{ position: 'fixed', zIndex: 1, width: isOpen ? '160px' : '45px'}} className='sidebar-header'>
             <div>
               <p>Smart</p>
             </div>
-          </Header>
+          </div>
           <div className="top_section">
              {isOpen ?  <Avatar shape="square" size="large" icon={<UserOutlined /> } /> :
                  <Avatar shape="square" size="small" icon={<UserOutlined />} />
@@ -108,12 +116,31 @@ const SideBar:FC<IProps> = ({ children }) => {
               );
             })}
           </section>
+        </Scrollbars>
         </motion.div>
          <div className='content'>
             <Topbar/>
-            <main>
+            <Scrollbars style={{ width: '100%', height: '100%' }}>
+              <main>
+              <Flex.Row>
+                <Lead className='title'>{letterCase(actualPath[1])}</Lead>
+                <div className='bread-cumb'>
+                  <Paragraph className='text'>Home{
+                      actualPath?.map((item, index) => 
+                        item && <div className="others" key={index}>
+                          <Flex.Row>
+                             <MdKeyboardArrowRight className='icon'/> 
+                            <Paragraph className='text-other'>
+                              {letterCase(item)}
+                            </Paragraph>
+                          </Flex.Row>
+                        </div>)
+                    }</Paragraph>
+                </div>
+              </Flex.Row>
               {children}
             </main>
+            </Scrollbars>
          </div>
       </div>
     </>
