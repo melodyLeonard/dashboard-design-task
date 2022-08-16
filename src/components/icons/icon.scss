@@ -1,0 +1,46 @@
+.icon-stat-wrapper {
+    position: relative;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    width: 12px;
+    height: 12px;
+
+    .icon {
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .number {
+        border-radius: 50%;
+        z-index: 1000;
+        font-size: 8px;
+        height: 12px;
+        width: 12px;
+        padding: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        color: white;
+        font-weight: 600;
+        transition: all .2s ease-in-out;
+        cursor: pointer;
+
+
+        &.primary {
+            background: rgb(51, 89, 155);
+        }
+
+        &.orange {
+            background: rgb(235, 123, 4);
+        }
+
+        &:hover {
+            transform: scale(1.3);
+        }
+
+    }
+}

@@ -1,13 +1,26 @@
+@import '~antd/dist/antd.css';
+@import './font.css';
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  background: #eceaea;
+  color: rgb(21, 21, 21);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.ant-layout-header {
+  height: 40px !important;
+  padding: 0 !important;
+  background: white !important;
+  box-shadow: 0 0 8px rgb(118, 116, 116);
+  -webkit-box-shadow: 0 0 8px rgb(118, 116, 116);
+  -moz-box-shadow: 0 0 8px rgb(118, 116, 116);
+}
+
+.ml-1 {
+  margin-left: 1rem;
 }
