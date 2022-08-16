@@ -9,7 +9,7 @@ import { Avatar } from 'antd';
 
 const Topbar = () => {
        const {toggleSidebar, isOpen} = useSidebar()
-  return <div style={{ position: 'fixed', zIndex: 1, width: isOpen ? '88.6%' : '98%' }} className='wrapper'>
+  return <div style={{ position: 'fixed', zIndex: 1, width: isOpen ? '88.6%' : '97%' }} className='wrapper'>
     <div className='container'>
        <div className='left-content'>
          <IoIosMenu className='menu-icon' onClick={() => toggleSidebar()}/>
