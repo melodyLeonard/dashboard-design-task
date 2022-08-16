@@ -25,8 +25,6 @@ const SideBar:FC<IProps> = ({ children }) => {
   const {pathname} = useLocation();
 
   const actualPath = pathname.split('/');
-  
-  console.log(actualPath);
 
   return (
     <>

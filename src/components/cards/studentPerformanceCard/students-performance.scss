@@ -5,6 +5,12 @@
     border-radius: 5px;
     padding: 10px;
 
+    @media only screen and (max-width: 500px) {
+        width: 100%;
+        margin-bottom: 40px;
+        height: auto;
+    }
+
     .title-students {
         margin-bottom: 0;
     }

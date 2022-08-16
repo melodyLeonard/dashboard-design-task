@@ -5,6 +5,8 @@ import { Flex } from '../../layout/Layout';
 import { Lead, Paragraph } from '../../layout/Typography';
 import './teachersList.scss'
 import ActionIcon from '../../icons/ActionIcon';
+import { Avatar } from 'antd';
+import { UserOutlined } from '@ant-design/icons';
 
 interface IProps {
   headerItems: any[];
@@ -19,17 +21,23 @@ const TeachersListCard: FC<IProps> = ({headerItems, tableItems}) => {
 
     <div className="table-wrapper">
       <table className="table">
-        <tr>
+       <thead>
+         <tr>
             {
               headerItems.map((item:string, idx: number) => 
-              <th>
+              <th key={idx}>
                 <Lead className="table-item" key={idx}>{item}</Lead>
               </th>)
             }
         </tr>
-            {
+       </thead>
+            <tbody>
+              {
               tableItems.map((item:any, idx: number) => 
-                <tr className='table-item-row'>
+                <tr key={idx} className='table-item-row'>
+                  <td>
+                     <Avatar size="small" icon={<UserOutlined />} />
+                  </td>
                   <td>
                     <Paragraph className="table-item" key={idx}>{item.name}</Paragraph>
                   </td>
@@ -54,6 +62,7 @@ const TeachersListCard: FC<IProps> = ({headerItems, tableItems}) => {
                 </tr>
                 )
             }
+            </tbody>
       </table>
     </div>
   </div>;

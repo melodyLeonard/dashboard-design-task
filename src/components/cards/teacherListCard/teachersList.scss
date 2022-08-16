@@ -1,9 +1,14 @@
 .teacher-list-container {
-    width: 875px;
+    width: 1050px;
     height: 350px;
+    margin-bottom: 1rem;
     background: white;
     border-radius: 5px;
     padding: 10px 0;
+
+    @media only screen and (max-width: 500px) {
+        height: auto;
+    }
 
     .header {
         padding: 0px 10px;
@@ -14,9 +19,11 @@
         padding: 0px 20px;
         width: 100%;
 
+
         .table {
             width: 100%;
             border-collapse: collapse;
+            table-layout: fixed;
 
             th,
             td {
@@ -26,6 +33,7 @@
 
                 .table-item {
                     margin-bottom: 0;
+                    word-wrap: break-word;
                 }
 
                 .action {

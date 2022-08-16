@@ -37,6 +37,7 @@ export const cardData= [
 
 export const table = {
     headerItems: [
+        '#',
         'Name', 
         'Department', 
         'Email',
