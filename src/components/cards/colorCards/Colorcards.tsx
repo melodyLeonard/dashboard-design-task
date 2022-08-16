@@ -1,5 +1,6 @@
 import {FC} from 'react';
 import './colorCards.scss'
+import { Paragraph } from '../../layout/Typography';
 
 type Colors = 'primary' | 'orange' | 'cyan' | 'red'
 interface IProps{
@@ -21,10 +22,10 @@ const Colorcards:FC<IProps> = ({icon, number, className, color, percentage, titl
             </div>
         </div>
         <div className='right'>
-            <p>{title}</p>
-             <p>{number}</p>
-             <input className='slider' type="range" min="1" max="100" value={percentage} />
-              <p>{number}% Increase in 28 days</p>
+            <Paragraph>{title}</Paragraph>
+            <Paragraph>{number}</Paragraph>
+            <input onChange={() => {}} className='slider' type="range" min="1" max="100" value={percentage} />
+            <Paragraph>{percentage}% Increase in 28 days</Paragraph>
         </div>
     </div>
   );

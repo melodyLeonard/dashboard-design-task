@@ -10,16 +10,17 @@ const AppNavigation = () => {
                 <Routes>
                     <Route index element={<Home />} />
                     {
-                        routes.map(({path})=> <Route
-                        path={path}
-                        element={
-                            <ProtectedRoute isAuthenticated={isAuthenticated}>
-                                <SideBar>
-                                    <Home />
-                                </SideBar>
-                            </ProtectedRoute>
-                        }
-                        /> )
+                        routes.map(({path}, idx)=> <Route
+                            key={idx}
+                            path={path}
+                            element={
+                                <ProtectedRoute isAuthenticated={isAuthenticated}>
+                                    <SideBar>
+                                        <Home />
+                                    </SideBar>
+                                </ProtectedRoute>
+                            }
+                            /> )
                     }      
                 </Routes>
             </BrowserRouter>

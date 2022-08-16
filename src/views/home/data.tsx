@@ -19,7 +19,7 @@ export const cardData= [
     },
      {
         percentage: 20,
-        title: 'New Students',
+        title: 'Total Course',
         number: 158,
         color: 'primary',
         icon: <TbUsers className='icon' />

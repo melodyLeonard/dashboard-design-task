@@ -1,11 +1,13 @@
-import Colorcards from '../../components/Cards/colorCards/Colorcards';
+import Colorcards from '../../components/cards/colorCards/Colorcards';
 import { cardData } from './data';
 import './home.scss'
+import { Flex } from '../../components/layout/Layout';
+import StudentsPerformance from '../../components/cards/studentPerformanceCard/StudentsPerformance';
 
 
 const Home = () => {
   return <div>
-    <div className='cards-container'>
+    <Flex.Row className='cards-container'>
     {
         cardData.map(({
             title, 
@@ -13,10 +15,16 @@ const Home = () => {
             number, 
             color="primary", 
             percentage
-        }) => 
-            <Colorcards title={title} icon={icon} number={number} color={color} className='' percentage={percentage} />)
+        }, idx) => 
+            <Colorcards key={idx} title={title} icon={icon} number={number} color={color} className='' percentage={percentage} />)
     }
-    </div>
+    </Flex.Row>
+    <Flex.Row>
+        <div>
+
+        </div>
+        <StudentsPerformance/>
+    </Flex.Row>
     </div>;
 };
 
