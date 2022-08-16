@@ -1,19 +1,22 @@
+import Colorcards from '../../components/Cards/colorCards/Colorcards';
+import { cardData } from './data';
+import './home.scss'
 
-import { IoIosQrScanner } from 'react-icons/io';
-import IconStats from '../../components/icons/IconStats';
+
 const Home = () => {
- 
   return <div>
-   <p> Home</p>
-   <p> Home</p>
-   <p> Home</p>
-   <p> Home</p>
-   <p> Home</p>
-   <p> Home</p>
-   <p> Home</p>
-   <p> Home</p>
-    <IconStats icon={ <IoIosQrScanner />} number={5}/>
-    
+    <div className='cards-container'>
+    {
+        cardData.map(({
+            title, 
+            icon, 
+            number, 
+            color="primary", 
+            percentage
+        }) => 
+            <Colorcards title={title} icon={icon} number={number} color={color} className='' percentage={percentage} />)
+    }
+    </div>
     </div>;
 };
 

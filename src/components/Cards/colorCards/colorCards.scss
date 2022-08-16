@@ -1,0 +1,79 @@
+.color-card {
+    height: 110px;
+    width: 300px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+
+    &.primary {
+        background: rgb(78, 138, 242);
+    }
+
+    &.orange {
+        background: rgb(238, 180, 86);
+    }
+
+    &.cyan {
+        background: rgb(60, 209, 176);
+    }
+
+    &.red {
+        background: rgb(235, 78, 78);
+    }
+
+    .left {
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        .icon-container {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(249, 247, 247, 0.064);
+
+            .icon {
+                font-size: 20px;
+                color: white
+            }
+        }
+    }
+
+    .right {
+        flex: 1;
+
+        p {
+            margin-bottom: 4px !important;
+            color: white;
+        }
+
+        input[type='range'] {
+            overflow: hidden;
+            height: 2px;
+            width: 100%;
+            -webkit-appearance: none;
+            background-color: rgba(255, 255, 255, 0.089);
+        }
+
+        input[type='range']::-webkit-slider-runnable-track {
+            height: 10px;
+            -webkit-appearance: none;
+            color: #ffffff;
+            margin-top: -1px;
+        }
+
+        input[type='range']::-webkit-slider-thumb {
+            width: 0px;
+            -webkit-appearance: none;
+            cursor: ew-resize;
+            background: #434343;
+            box-shadow: -80px 0 0 80px #fff;
+        }
+    }
+}
