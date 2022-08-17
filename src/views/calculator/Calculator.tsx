@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import Button from '../../components/Button/Button';
 import ButtonBox from '../../components/Button/ButtonBox';
-import { Paragraph } from '../../components/layout/Typography';
 import Screen from '../../components/Screen/Screen';
 import { useCalculator } from '../../store/hooks/useCalculator';
 import './calulator.scss';
@@ -37,7 +36,6 @@ const Calculator = () => {
             <Screen value={calc.num ? calc.num : calc.res} />
             <ButtonBox>
                 {btnValues.flat().map((btn, i) => {
-                    console.log(btn === '=');
                 return (
                     <Button
                     key={i}

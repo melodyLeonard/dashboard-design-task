@@ -123,7 +123,7 @@ const SideBar:FC<IProps> = ({ children }) => {
               <Flex.Row>
                 <Lead className='title'>{letterCase(actualPath[1])}</Lead>
                 <div className='bread-cumb'>
-                  <Paragraph className='text'>Home{
+                  <div className='text'>Home{
                       actualPath?.map((item, index) => 
                         item && <div className="others" key={index}>
                           <Flex.Row>
@@ -133,7 +133,7 @@ const SideBar:FC<IProps> = ({ children }) => {
                             </Paragraph>
                           </Flex.Row>
                         </div>)
-                    }</Paragraph>
+                    }</div>
                 </div>
               </Flex.Row>
               {children}
