@@ -15,13 +15,13 @@ const AppNavigation = () => {
                             </SideBar>
                         </ProtectedRoute>} />
                     {
-                        routes.map(({path}, idx)=> <Route
+                        routes.map(({path, screen}, idx)=> <Route
                             key={idx}
                             path={path}
                             element={
                                 <ProtectedRoute isAuthenticated={isAuthenticated}>
                                     <SideBar>
-                                        <Home />
+                                        {screen ? screen : <Home />}
                                     </SideBar>
                                 </ProtectedRoute>
                             }

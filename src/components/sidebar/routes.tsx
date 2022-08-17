@@ -1,14 +1,21 @@
 import { AiFillHeart, AiTwotoneFileExclamation } from "react-icons/ai";
 import { BiAnalyse, BiCog } from "react-icons/bi";
 import { BsCartCheck } from "react-icons/bs";
-import { FaHome, FaLock, FaMoneyBill, FaUser } from "react-icons/fa";
+import { FaCalculator, FaHome, FaLock, FaMoneyBill, FaUser } from "react-icons/fa";
 import { MdMessage } from "react-icons/md";
+import Calculator from '../../views/calculator/Calculator';
 
 export const routes = [
   {
     path: "/dashboard",
     name: "Dashboard",
     icon: <FaHome />,
+  },
+  {
+    path: "/calculator",
+    name: "Calculator",
+    icon: <FaCalculator />,
+    screen: <Calculator/>
   },
   {
     path: "/contacts",
