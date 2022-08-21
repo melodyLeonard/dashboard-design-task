@@ -120,7 +120,7 @@ const SideBar:FC<IProps> = ({ children }) => {
             <Topbar/>
             <Scrollbars style={{ width: '100%', height: '100%' }}>
               <main>
-              <Flex.Row>
+              <Flex.Row className="top-wrapper">
                 <Lead className='title'>{letterCase(actualPath[1])}</Lead>
                 <div className='bread-cumb'>
                   <div className='text'>Home{

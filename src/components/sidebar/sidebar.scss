@@ -169,43 +169,48 @@
                 padding: 20px 5px
             }
 
-            .title {
-                font-size: 20px;
-                color: #6b6b6b;
-            }
+            .top-wrapper {
+                margin-bottom: 1rem;
 
-            .bread-cumb {
-                display: flex;
-                align-items: center;
-                background: #dedddd;
-                border-radius: 30px;
-                padding: 10px 15px;
+                .title {
+                    font-size: 20px;
+                    color: #6b6b6b;
+                }
 
-                .text {
-                    margin-bottom: 0;
+                .bread-cumb {
                     display: flex;
-                    font-weight: 600;
-                    color: #a6a6a6;
                     align-items: center;
+                    background: #dedddd;
+                    border-radius: 30px;
+                    padding: 10px 15px;
 
-                    .others {
-                        color: #6b6b6b;
+                    .text {
+                        margin-bottom: 0;
+                        display: flex;
+                        font-weight: 600;
+                        color: #a6a6a6;
+                        align-items: center;
 
-                        .text-other {
+                        .others {
                             color: #6b6b6b;
-                            font-weight: 600;
-                            margin-bottom: 0;
+
+                            .text-other {
+                                color: #6b6b6b;
+                                font-weight: 600;
+                                margin-bottom: 0;
+                            }
+
+                            .icon {
+                                font-weight: 600;
+                                font-size: 16px;
+                                margin: 0 5px;
+                            }
                         }
 
-                        .icon {
-                            font-weight: 600;
-                            font-size: 16px;
-                            margin: 0 5px;
-                        }
                     }
-
                 }
             }
+
         }
     }
 }

@@ -1,12 +1,13 @@
 .teacher-list-container {
-    width: 955px;
-    height: 350px;
-    margin-bottom: 1rem;
+    width: 100%;
+    height: auto;
     background: white;
     border-radius: 5px;
     padding: 10px 0;
+    grid-column: span 3;
 
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 900px) {
+        grid-column: span 4;
         height: auto;
     }
 

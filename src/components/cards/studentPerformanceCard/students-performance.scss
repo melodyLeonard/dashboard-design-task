@@ -1,15 +1,16 @@
 .student-pef-wrapper {
-    width: 280px;
-    height: 350px;
+    width: min(100%, 99.9%);
+    height: auto;
     background: white;
     border-radius: 5px;
     padding: 10px;
+    grid-column: span 1;
 
-    @media only screen and (max-width: 500px) {
-        width: 100%;
-        margin-bottom: 40px;
+    @media only screen and (max-width: 900px) {
+        grid-column: span 4;
         height: auto;
     }
+
 
     .title-students {
         margin-bottom: 0;

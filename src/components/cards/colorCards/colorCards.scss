@@ -1,14 +1,18 @@
 .color-card {
     height: 100px;
-    width: 280px;
+    width: 100%;
     border-radius: 5px;
     padding: 10px;
     display: flex;
     flex-direction: row;
+    grid-column: span 1;
 
-    @media only screen and (max-width: 500px) {
-        width: 100%;
-        margin-bottom: 10px;
+    @media only screen and (max-width: 900px) {
+        grid-column: span 2;
+    }
+
+    @media only screen and (max-width: 700px) {
+        grid-column: span 4;
     }
 
     &.primary {
